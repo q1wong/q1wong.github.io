@@ -1,34 +1,209 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <script>location.href="qsblog/index.html";</script>
-    <link rel="icon" href="../../favicon.ico">
-
-    <title></title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="../static/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/index.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+	<title>纯净网址导航</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+	<!--<script>
+	$(function(){
+	$('.nav a').each(function(){
+	var href = $(this).attr('href');
+	var count = window.localStorage.getItem(href);
+	count = count || 0;
+	$(this).append('<i>' + count + '</i>');
+	$(this).attr('target', '_blank');
+	$(this).click(function(){
+	var count = parseInt($(this).find('i').html()) + 1;
+	$(this).find('i').html(count);
+	window.localStorage.setItem(href, count);
+	console.log(count);
+	});
+	$(this).hover(function(){
+	$(this).parents('.nav').find('h3 i').html($(this).attr('href'));
+	}, function(){
+	$(this).parents('.nav').find('h3 i').html('');
+	});
+	});
+	});
+	</script>-->
   </head>
-
   <body>
-      
+	<div class="row-main toper">
+	  <p><a href="#" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('https://q1wong.github.io/');">设为主页</a> | <a href="#">留言</a> | <a href="javascript:window.external.AddFavorite('https://q1wong.github.io/','PHP学习笔记')">收藏</a></p>
+	</div>
+	<div class="row-main header">
+	  <div class="head_p">
+		<h1 class="head">纯 净 导 航</h1>
+	  </div>
+	  <div class="head_iframe">
+		<iframe class="weather" allowtransparency="true" frameborder="0" width="500px" height="64px" scrolling="no"            src="https://tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=2&d=3&bd=0&k=&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=565&h=64&align=right">
+		</iframe>
+	  </div>
+	</div>
+	<div class="row-main searcher">
+	  <!--<div id="tab1">-->
+	  <div class="menubox">
+		<ul>
+		  <li id="one1" onclick="setTabb('one',1,4)" class="hover">百度</li>
+		  <li id="one2" onclick="setTabb('one',2,4)">搜狗</li>
+		  <li id="one3" onclick="setTabb('one',3,4)">必应</li>
+		  <li id="one4" onclick="setTabb('one',4,4)">谷歌</li>
+		</ul>
+	  </div>
+	  <div class="contentbox">
+		<div id="con_one_1" class="hover">
+		  <form action="http://www.baidu.com/s",method="get" target="_blank">
+			<img src="http://www.baidu.com/img/baidu_jgylogo3.gif" alt="百度logo"/>
+			<input type="text" name="wd" size="38" onfocus="onFocus()">
+			<input type="submit" value="百度一下">
+			<input type="hidden" name="tn" value="ace">
+		  </form>
+		</div>
+		<div id="con_one_2" style="display:none">
+		  <div id="head-left">
+            <a href="https://news.sogou.com/" class="head-left-style">新闻</a>
+            <span class="span-style">网页</span>
+            <a href="http://weixin.sogou.com/" class="head-left-style">微信</a>
+            <a href="http://zhihu.sogou.com/" class="head-left-style">知乎</a>
+            <a href="http://pic.sogou.com/" class="head-left-style">图片</a>
+            <a href="https://v.sogou.com/" class="head-left-style">视频</a>
+            <a href="http://mingyi.sogou.com/?fr=common_index_nav" class="head-left-style">明医</a>
+            <a href="http://english.sogou.com/?fr=pcweb_index_nav" class="head-left-style">英文</a>
+            <a href="https://wenwen.sogou.com/?ch=websearch" class="head-left-style">问问</a>
+            <a href="http://scholar.sogou.com/?fr=common_index_nav" class="head-left-style">学术</a>
+            <span class="more-down" onmouseover="show(this)"  onmouseout="hide(this)">
+			  <a href="http://pic.sogou.com/" class="head-left-style">更多</a>
+			  <div class="more-down-class">
+				<span class="ico-san"></span>
+				<a href="">地图</a>
+				<a href="">购物</a>
+				<a href="">百科</a>
+				<a href="">知识</a>
+				<a href="">应用</a>
+				<a href="">翻译</a>
+				<a href="">指数</a>
+				<a href="">党建</a>
+				<a href="">全部</a>
+			  </div>
+            </span>
+		  </div>
+		</div>
+		<div id="con_one_3" style="display:none"> 我是三号</div>
+		<div id="con_one_4" style="display:none">
+		  <form action="https://www.google.com/s",method="get" target="_blank">
+			<a href="https://www.sogou.com/content-search.xml" style="text-decoration:none;font-size:24px;color:#000;height:100%;">
+			  <img src="https://www.sogou.com/images/logo/new/favicon.ico?v=2" alt="搜狗logo"/>
+			  搜狗搜索
+			</a>
+			<input type="text" name="wd" size="38" onfocus="onFocus()">
+			<input type="submit" value="搜索">
+			<input type="hidden" name="tn" value="ace">
+		  </form>
+		</div>
+	  </div>
+	  <!--</div>-->
+	</div>
+	<div class="row-main newsPortal">
+	  <h4><a href="http://m.china.com.cn/"> 中国网 </a><a href="https://m.cctv.com/"> 央视网 </a><a href="http://m.xinhuanet.com/"> 新华网 </a><a href="http://m.people.cn/"> 人民网 </a><a href="http://m.cnr.cn/"> 央广网 </a><a href="http://wap.cac.gov.cn/">网信网</a></h4>
+	</div>
+	<div class="row-main navContainer">
+	  <!-- 左部 -->
+	  <div class="leftpart" style="max-width:38.2%;">
+		<div class="leftNavContainer">
+		  <div class="nav">
+			<!--<h3>类别 <i></i></h3>-->
+			<a href="http://m.360kan.com/">影视</a>
+			<a href="https://y.music.163.com/m/">音乐</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="https://www.tianyancha.com/">天眼查</a>
+			<a href="http://www.iconfont.cn/">图字</a>
+			<a href="http://photofunia.com/">photofunia</a>
+
+			<div class="clear"></div>
+		  </div>
+		  <div class="nav">
+			<!--<h3>邮箱 <i></i></h3>-->
+			<a href="https://ui.ptlogin2.qq.com/cgi-bin/login?style=9&appid=522005705&daid=4&s_url=https%3A%2F%2Fw.mail.qq.com%2Fcgi-bin%2Flogin%3Fvt%3Dpassport%26vm%3Dwsk%26delegate_url%3D%26f%3Dxhtml%26target%3D&hln_css=http%3A%2F%2Fmail.qq.com%2Fzh_CN%2Fhtmledition%2Fimages%2Flogo%2Fqqmail%2Fqqmail_logo_default_200h.png&low_login=1&hln_autologin=%E8%AE%B0%E4%BD%8F%E7%99%BB%E5%BD%95%E7%8A%B6%E6%80%81">QQ邮箱</a>
+			<a href="https://smart.mail.163.com/login.htm">163邮箱</a>
+			<a href="https://smart.mail.126.com/login.htm">126邮箱</a>
+			<a href="https://mail.aliyun.com/alimail/auth/login?reurl=/alimail/">阿里邮箱</a>
+			<a href="https://m.mail.sohu.com/">搜狐邮箱</a>
+			<a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&ct=1607967843&rver=7.0.6737.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fnlp%3d1%26RpsCsrfState%3d93e85138-d0c3-69f0-b078-f396ca352b4d&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&pcexp=false&cobrandid=90015">Outlook邮箱</a>
+
+			<div class="clear"></div>
+		  </div>
+		  <!--<iframe width="100%" height=136 src='https://player.youku.com/embed/XMzg0MDkyNTQ5Mg==?rel=0&amp;autoplay=1' frameborder=0 allowfullscreen></iframe>-->
+		  <!--<iframe width="100%" src="http://tv.cctv.com/v/v1/VIDE1389834138520247.html" frameborder=0></iframe>-->
+		  <table border=0 cellspacing=1 cellpadding=0 width=’98%’>
+			<td valign="top"><div align="center">
+			  <iframe src="http://www.cctv.com/homepage/46/index.shtml"; name="express"
+				width="100%" height="40" marginwidth="0" marginheight="0" frameborder="0"
+				scrolling="no"></iframe></div> 
+		  </table>
+		</div>
+	  </div>
+	  <!-- 右部 -->
+	  <div class="rightpart" style="max-width:61.8%;">
+		<div class="rightNavContainer">
+		  <div class="nav">
+			<!--<h3>类别一 <i></i></h3>-->
+			<a href="https://www.12306.cn/index/">12306</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="#">网址</a>
+
+			<div class="clear"></div>
+		  </div>
+
+		  <div class="nav">
+			<!--<h3>类别二 <i></i></h3>-->
+			<a href="#">xx</a>
+			<a href="https://m.jd.com/">京东</a>
+			<a href="https://map.baidu.com/">百度地图</a>
+			<a href="https://m.amap.com/">高德地图</a>
+			<a href="https://www.douban.com/">豆瓣</a>
+			<a href="https://www.docin.com/">豆丁</a>
+			<a href="https://tieba.baidu.com/">贴吧</a>
+			<div class="clear"></div>
+		  </div>
+
+		  <div class="nav">
+			<!--<h3>类别三<i></i></h3>-->
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<a href="http://www.网址.com">网址</a>
+			<div class="clear"></div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+    <footer>
+	  <span style="font-family:arial;">Copyright &copy;2020 纯净导航服务</span>
+	</footer>
+	<input type="text" id="textArea" style="width:100%;" placeholder="哈喽睡觉考虑考虑考虑时间才">
+
+	<script src="static/js/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript"></script>
   </body>
 </html>
