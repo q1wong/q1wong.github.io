@@ -1,0 +1,28 @@
+<html>
+  <body>
+	<table border='0' width='100%'>  
+	  <tr width="100%">  
+        <td width='90%' height="100%">  
+		<table border='1' width='100%' height="100%" bgcolor="#cbcbcb" cellspacing='0' style="border-top:1px solid #4f7fc9;border-left:1px solid #4f7fc9;border-right:0px;border-bottom:0px;" mce_style="border-top:1px solid #4f7fc9;border-left:1px solid #4f7fc9;border-right:0px;border-bottom:0px;">  
+		  <tr>  
+			<td>  
+			  <table name="myP" id="myP" border='0' height='100%' width='0%' bgcolor='#29ed0e'>  
+				<tr>  
+				  <td width='100%' height="100%" align="right">  
+				  </td>  
+				</tr>  
+			  </table>  
+			</td>  
+		  </tr>  
+		</table>  
+        <td>  
+        <td width='10%'>  
+		  <font color='#000000' size='5'><span name="mynumber" id="mynumber">1%</span></font>  
+        </td>  
+	  </tr>  
+	</table>  
+
+	<p>程序日志:  
+	<div id="console" name="console" style="margin-top:1px;position:absolute;width:90%;height:300px;overflow:auto;border:1px solid black;background-color:cbcbcb;"><div>  
+  </body>
+</html>
